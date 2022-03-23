@@ -12,6 +12,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
          python \
          nginx \
          ca-certificates \
+         git \
     && rm -rf /var/lib/apt/lists/*
     
 
