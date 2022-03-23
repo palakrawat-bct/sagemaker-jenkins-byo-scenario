@@ -2,7 +2,7 @@
 # This is a Python 2 image that uses the nginx, gunicorn, flask stack
 # for serving inferences in a stable way.
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 MAINTAINER Amazon AI <sage-learner@amazon.com>
 
@@ -13,7 +13,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
          nginx \
          ca-certificates \
     && rm -rf /var/lib/apt/lists/*
-    
+RUN apt-get install python3.9-full python3.9-dev linux-headers-virtual make gcc libtool   
 
 # Here we get all python packages.
 # There's substantial overlap between scipy and numpy that we eliminate by
