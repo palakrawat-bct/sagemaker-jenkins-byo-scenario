@@ -17,7 +17,7 @@ ca-certificates \
 
 
 RUN wget https://bootstrap.pypa.io/pip/2.7/get-pip.py && python get-pip.py && \
-    pip install numpy==1.16.2 scipy==1.2.1 scikit-learn==0.20.2 pandas flask gevent gunicorn && \
+    pip install numpy==1.16.2 scipy==1.2.1 scikit-learn==0.20.2 pandas flask gunicorn && \
         (cd /usr/local/lib/python2.7/dist-packages/scipy/.libs; rm *; ln ../../numpy/.libs/* .) && \
         rm -rf /root/.cache
 
